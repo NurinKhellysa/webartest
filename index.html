@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebXR AR Demo</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/webxr-polyfill@latest/build/webxr-polyfill.js"></script>
+<script>
+  const polyfill = new WebXRPolyfill();
+</script>
 </head>
 <body style="margin: 0; overflow: hidden;">
     <button id="arButton" style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); padding: 10px 20px; font-size: 18px; background: blue; color: white; border: none; cursor: pointer;">
