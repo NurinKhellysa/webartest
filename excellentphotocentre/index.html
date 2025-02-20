@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excellent Photo AR</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/jeromeetienne/ar.js/aframe/build/aframe-ar.min.js"></script>
+
+</head>
+<body>
+  <header>
+    <h1>Excellent Photo Centre - Virtual Frame Try-On</h1>
+  </header>
+  <main>
+    <!-- Frame Customization Section -->
+    <section id="customization">
+      <h2>Customize Your Frame</h2>
+      <label for="frame-size">Choose Frame Size:</label>
+      <select id="frame-size">
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+      </select>
+      
+      <label for="frame-design">Choose Frame Design:</label>
+      <select id="frame-design">
+        <option value="classic">Classic</option>
+        <option value="modern">Modern</option>
+        <option value="vintage">Vintage</option>
+      </select>
+
+      <label for="upload-image">Upload Your Picture:</label>
+      <input type="file" id="upload-image" accept="image/*">
+
+      <button id="preview-btn">Preview Frame</button>
+    </section>
+
+    <!-- Frame Preview Section -->
+    <section id="preview">
+      <h2>Your Frame Preview</h2>
+      <div id="frame-container"></div>
+    </section>
+
+    <!-- AR Viewer Section -->
+    <section id="ar-view">
+      <h2>View Frame in AR</h2>
+      <button id="ar-btn">Enable AR</button>
+      <div id="ar-container"></div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r132/three.min.js"></script>
+  <script src="https://unpkg.com/webxr-polyfill@latest/build/webxr-polyfill.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/ar.js/aframe/build/aframe-ar.min.js"></script>
+<script>
+  ARjs.Context.baseURL = './'; // Set the base URL for AR.js assets.
+  ARjs.Context.features['isDesktop'] = true; // Enable desktop mode if required.
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>
